@@ -1,18 +1,22 @@
 import classes from './MainNavigation.module.css';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 const MainNavigation = () => {
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>Logo</div>  
+      <div>
+        <Link to="/" className={classes.logo}>Logo</Link>
+      </div>  
       <nav className={classes.nav}>
         <ul>
             <li>
-              <Link to="all">All</Link>
+              {/* <Link to="/quotes">All</Link> */}
+              <NavLink activeClassName={classes.active} to="/quotes">All</NavLink>
             </li>
             <li>
-              <Link to="add">add</Link>
+              {/* <Link to="/new-quote">add</Link> */}
+              <NavLink activeClassName={classes.active} to="/new-quote">add</NavLink>
             </li>
         </ul>
       </nav>
