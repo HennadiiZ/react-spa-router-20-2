@@ -1,7 +1,9 @@
+
+
 const NewQuote = () => {
   return (
     <>
-      add quotes
+      <p>add quotes</p>
     </>
   );
 };

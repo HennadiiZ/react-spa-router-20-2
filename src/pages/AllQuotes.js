@@ -1,7 +1,10 @@
+import QuoteDetails from './QuoteDetail';
+
 const AllQuotes = () => {
   return (
     <>
-      quotes
+      <p>quotes</p>
+      <QuoteDetails/>
     </>
   );
 };
