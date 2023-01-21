@@ -10,9 +10,6 @@ const QuoteItem = (props) => {
         </blockquote>
         <figcaption>{props.author}</figcaption>
       </figure>
-      {/* <a className='btn'>
-        View Fullscreen
-      </a> */}
       <Link to={`/quotes/${props.id}`} className='btn'>
         View Fullscreen
       </Link>

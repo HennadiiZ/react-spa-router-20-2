@@ -16,10 +16,11 @@ const QuoteDetails = () => {
 
   return (
     <Fragment>
-      <HighlightedQuote quote={quote.quote} text={quote.text} author={quote.author}/>
-      {/* <p>{params.quoteId}</p> */}
-      <p></p>
-      {/* <Route path={`/quotes/:quoteId/comments`}> */}
+      <HighlightedQuote 
+        quote={quote.quote} 
+        text={quote.text} 
+        author={quote.author}
+      />
       <Route path={`/quotes/${params.quoteId}/comments`}>
         <Comments />
       </Route>
