@@ -3,6 +3,16 @@ import { useHistory, useLocation } from 'react-router-dom';
 import QuoteItem from './QuoteItem';
 import classes from './QuoteList.module.css';
 
+const sortQuotes = (quotes, ascending) => {
+  return quotes.sort((quoteA, quoteB) => {
+    if (ascending) {
+      return quoteA.id > quoteB.id ? 1 : -1;
+    } else {
+      return quoteA.id < quoteB.id ? 1 : -1;
+    }
+  });
+};
+
 const QuoteList = (props) => {
   const history = useHistory();
   const location = useLocation();
@@ -20,8 +30,8 @@ const QuoteList = (props) => {
     // console.log(props.quotes);
     // console.log(location.search); // ?sort=asc
     // history.push('/quotes?sort=' + 'asc');
-
     history.push('/quotes?sort=' + (isSortingAscending ? 'desc' : 'asc'));
+    sortQuotes(props.quotes, isSortingAscending);
   };
 
   return (
@@ -30,7 +40,8 @@ const QuoteList = (props) => {
         <button onClick={changeSortingHandler}>Sort {sorting}</button>
       </div>
       <ul className={classes.list}>
-        {props.quotes.map((quote) => (
+        {
+        props.quotes.map((quote) => (
           <QuoteItem
             key={quote.id}
             id={quote.id}
