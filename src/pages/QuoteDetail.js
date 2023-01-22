@@ -14,6 +14,10 @@ const QuoteDetails = () => {
   
   const quote = DUMMY_QUOTES.find(quote => quote.id === params.quoteId);
 
+  if (!quote) {
+    return <p>false</p>
+  }
+
   return (
     <Fragment>
       <HighlightedQuote 
