@@ -4,9 +4,9 @@ import { Fragment } from 'react';
 import HighlightedQuote from '../components/quotes/HighlightedQuote';
 
 const DUMMY_QUOTES = [
-  { id: 'q1', author: 'Hennadii', text: 'Learning React'},
-  { id: 'q2', author: 'Zhukov', text: 'Learning Angular'},
-  { id: 'q3', author: 'Arigos', text: 'Learning Vue is not good'},
+  { id: 'q1', author: 'Hennadii', text: 'a Learning React'},
+  { id: 'q2', author: 'Zhukov', text: 'c Learning Angular'},
+  { id: 'q3', author: 'Arigos', text: 'y Learning Vue is not good'},
 ];
 
 const QuoteDetails = () => {
