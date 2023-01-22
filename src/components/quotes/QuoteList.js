@@ -21,9 +21,10 @@ const QuoteList = (props) => {
   const isSortingAscending = queryParams.get('sort') === 'asc';
   const sorting = isSortingAscending ? 'Ascending' : 'Descending';
 
+  const sortedQuotes = sortQuotes(props.quotes, isSortingAscending);
+
   const changeSortingHandler = () => {
     history.push('/quotes?sort=' + (isSortingAscending ? 'desc' : 'asc'));
-    sortQuotes(props.quotes, isSortingAscending);
   };
 
   return (
@@ -33,7 +34,7 @@ const QuoteList = (props) => {
       </div>
       <ul className={classes.list}>
         {
-        props.quotes.map((quote) => (
+        sortedQuotes.map((quote) => (
           <QuoteItem
             key={quote.id}
             id={quote.id}
