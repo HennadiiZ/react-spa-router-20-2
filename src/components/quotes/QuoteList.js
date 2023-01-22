@@ -17,19 +17,11 @@ const QuoteList = (props) => {
   const history = useHistory();
   const location = useLocation();
  
-  // const [isAscending, setIsAscending] = useState(false);
-  // const sorting = !isAscending ? 'Ascending' : 'Descending';
-
   const queryParams = new URLSearchParams(location.search);
   const isSortingAscending = queryParams.get('sort') === 'asc';
   const sorting = isSortingAscending ? 'Ascending' : 'Descending';
 
   const changeSortingHandler = () => {
-    // setIsAscending(() => !isAscending);
-    // props.quotes.sort()
-    // console.log(props.quotes);
-    // console.log(location.search); // ?sort=asc
-    // history.push('/quotes?sort=' + 'asc');
     history.push('/quotes?sort=' + (isSortingAscending ? 'desc' : 'asc'));
     sortQuotes(props.quotes, isSortingAscending);
   };

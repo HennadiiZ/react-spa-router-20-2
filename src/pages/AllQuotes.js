@@ -12,7 +12,6 @@ const AllQuotes = () => {
       <QuoteList 
         quotes={DUMMY_QUOTES}
       />
-      {/* <QuoteDetails/> */}
     </>
   );
 };
