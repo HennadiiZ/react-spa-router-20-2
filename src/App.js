@@ -2,8 +2,11 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import QuoteDetails from './pages/QuoteDetail';
 import AllQuotes from './pages/AllQuotes';
-import NewQuote from './pages/NewQuote';
+// import NewQuote from './pages/NewQuote';
 import NotFound from './pages/NotFound';
+import React from 'react';
+
+const NewQuote = React.lazy(async () => await import('./pages/NewQuote')); 
 
 function App() {
   return (
