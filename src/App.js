@@ -42,3 +42,8 @@ function App() {
 }
 
 export default App;
+
+
+// Building The Code For Production
+  // npm run build
+  // firebase hosting:disable
